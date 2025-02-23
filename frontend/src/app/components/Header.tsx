@@ -194,7 +194,7 @@ const Header = () => {
   };
 
   return (
-    <header className="border-b sticky top-0 z-50">
+    <header className="border-b sticky top-0 z-50 bg-white">
       {/* Desktop View */}
       <div className="container w-[80%] mx-auto hidden lg:flex items-center justify-between p-4">
         <Link href={"/"} className="flex items-center">
@@ -257,7 +257,11 @@ const Header = () => {
                 <ShoppingCart className="w-4 h-4" />
                 Cart
               </Button>
-              {user && <span className="absolute left-5">3</span>}
+              {user && (
+                <span className="absolute left-6 bg-red-600 px-1 text-white rounded-full text-xs">
+                  3
+                </span>
+              )}
             </div>
           </Link>
         </div>
@@ -306,7 +310,11 @@ const Header = () => {
             <Button className="relative" variant="ghost">
               Cart
             </Button>
-            {user && <span className="absolute left-5">3</span>}
+            {user && (
+              <span className="absolute left-6 bg-red-600 px-1 text-white rounded-full text-xs">
+                3
+              </span>
+            )}
           </div>
         </Link>
       </div>
